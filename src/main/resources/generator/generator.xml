@@ -5,8 +5,8 @@
     <!--导入属性配置 -->
     <properties resource="classpath:generator/generator.properties"/>
 
-    <!-- 指定驱动jar包路径 -->
-    <classPathEntry location="D:\server\maven\repository\mysql\mysql-connector-java\5.1.29\mysql-connector-java-5.1.29.jar" />
+    <!-- 指定驱动jar包路径,根据自己的包路径进行修改 -->
+    <classPathEntry location="E:\maven-repo\mysql\mysql-connector-java\5.1.29\mysql-connector-java-5.1.29.jar" />
     <context id="context1">
         <!-- 注释 -->
         <commentGenerator>
@@ -35,6 +35,5 @@
         <table schema="" tableName="${table}" enableCountByExample="false"
                enableUpdateByExample="false" enableDeleteByExample="false"
                enableSelectByExample="false" selectByExampleQueryId="false"/>
-
     </context>
 </generatorConfiguration>

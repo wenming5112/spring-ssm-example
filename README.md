@@ -1,2 +1,4 @@
 # spring-ssm-example
-ssm 配置模板
+SSM 配置模板
+
+spring + spring MVC + mybatis
