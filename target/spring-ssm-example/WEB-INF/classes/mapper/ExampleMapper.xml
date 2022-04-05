@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.ssm.example.dao.ExampleDao">
-    <!--sql片段 可用于查询的时候说明查询哪些属性，这个把字段和类的属性对应上了-->
-
-</mapper>
