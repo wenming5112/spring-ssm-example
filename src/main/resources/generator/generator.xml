@@ -19,7 +19,7 @@
                         connectionURL="${jdbc.url}"
                         userId="${jdbc.username}"
                         password="${jdbc.password}">
-            <property name="nullCatalogMeansCurrent" value="true" />
+            <property name="nullCatalogMeansCurrent" value="true"/>
         </jdbcConnection>
 
         <!-- 类型转换 -->
@@ -57,11 +57,10 @@
         </javaClientGenerator>
 
         <!-- 如果需要通配所有表 直接用sql的通配符  %即可 -->
-<!--        <table tableName="user" domainObjectName="UserTest" enableCountByExample="false"-->
-<!--               enableUpdateByExample="false" enableDeleteByExample="false"-->
-<!--               enableSelectByExample="false" selectByExampleQueryId="false"/>-->
-        <table tableName="%">
-            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
-        </table>
+        <table tableName="t_user" domainObjectName="User" enableCountByExample="false" enableUpdateByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"/>
+        <!--        <table tableName="%">-->
+        <!--            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>-->
+        <!--        </table>-->
     </context>
 </generatorConfiguration>
