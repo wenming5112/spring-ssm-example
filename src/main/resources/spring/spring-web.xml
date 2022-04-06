@@ -3,18 +3,21 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
        xmlns:mvc="http://www.springframework.org/schema/mvc"
-       xmlns:task="http://www.springframework.org/schema/task"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
          http://www.springframework.org/schema/beans/spring-beans.xsd
          http://www.springframework.org/schema/context
          http://www.springframework.org/schema/context/spring-context.xsd
          http://www.springframework.org/schema/mvc
-         http://www.springframework.org/schema/mvc/spring-mvc.xsd
-         http://www.springframework.org/schema/task
-         http://www.springframework.org/schema/task/spring-task.xsd">
+         http://www.springframework.org/schema/mvc/spring-mvc.xsd"
+       default-autowire="byName">
 
     <!-- 对com.spring mvc包中的所有类进行扫描，以完成Bean创建和自动依赖注入的功能 -->
     <mvc:annotation-driven/>
+
+    <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="location" value="classpath:conf/config.properties"/>
+        <property name="ignoreUnresolvablePlaceholders" value="true"/>
+    </bean>
 
     <!-- 导入外部配置 -->
     <import resource="classpath:spring/spring-dao.xml"/>
@@ -46,6 +49,6 @@
     <!--<mvc:view-controller path="/" view-name="redirect:/"/>-->
 
     <!-- 定时任务配置 -->
-    <context:component-scan base-package="com.ssm.example.task" />
+    <context:component-scan base-package="com.ssm.example.task"/>
 
 </beans>
